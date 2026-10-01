@@ -80,7 +80,6 @@ const Wishlist = {
   has(id){ return this.get().includes(id); }
 };
 
-
 function formatPrice(n){ return "Rs. " + n.toLocaleString("en-PK"); }
 
 function showToast(msg){
