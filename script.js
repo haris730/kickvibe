@@ -20,18 +20,18 @@ const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER"; // REPLACE_ME e.g. 923001234567
    Prices are in PKR (Rs.) — edit as needed.
 ---------------------------------------------------------- */
 const PRODUCTS = [
-  { id:"kv-001", name:"Nova Runner Sneakers", category:"Sneakers", gender:"Men", sizes:[7,8,9,10,11], price:6500, oldPrice:8500, badge:"Sale", images:["https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85"], desc:"A clean low-top runner built for daily wear — breathable mesh upper, cushioned sole, and a neutral colourway that pairs with everything." },
-  { id:"kv-002", name:"Urban Street Hi-Tops", category:"Sneakers", gender:"Men", sizes:[8,9,10,11,12], price:7200, badge:"New", images:["https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85"], desc:"High-top silhouette with reinforced ankle support and a chunky outsole for extra street presence." },
-  { id:"kv-003", name:"Classic Canvas Slip-Ons", category:"Casual Shoes", gender:"Unisex", sizes:[6,7,8,9,10], price:3200, badge:"", images:["https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"], desc:"Lightweight canvas slip-ons for effortless everyday wear. Easy on, easy off, endlessly comfortable." },
-  { id:"kv-004", name:"Aria Platform Sneakers", category:"Women's Shoes", gender:"Women", sizes:[5,6,7,8], price:5800, oldPrice:7000, badge:"Sale", images:["https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85"], desc:"A platform sole gives everyday height without sacrificing comfort. Soft leather-look upper." },
-  { id:"kv-005", name:"Thrift Find — Retro Runner", category:"Thrift Shoes", gender:"Men", sizes:[9,10], price:2800, badge:"Thrift · 1 left", images:["https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85"], desc:"Pre-loved, carefully inspected retro runner in great condition. One-of-one — once it's gone, it's gone." },
-  { id:"kv-006", name:"Everyday Loafers", category:"Casual Shoes", gender:"Men", sizes:[7,8,9,10,11], price:4500, badge:"", images:["https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85"], desc:"Smart-casual loafers that move easily from desk to weekend. Cushioned footbed for all-day comfort." },
-  { id:"kv-007", name:"Motion Knit Trainers", category:"Sneakers", gender:"Women", sizes:[5,6,7,8,9], price:6900, badge:"New", images:["https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"], desc:"Sock-fit knit upper that moves with your foot, paired with a responsive foam midsole." },
-  { id:"kv-008", name:"Heritage Court Sneakers", category:"Sneakers", gender:"Men", sizes:[8,9,10,11], price:5400, badge:"", images:["https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85"], desc:"A timeless court silhouette in crisp leather panels — a wardrobe staple that never goes out of style." },
-  { id:"kv-009", name:"Thrift Find — Suede Boot", category:"Thrift Shoes", gender:"Women", sizes:[6,7], price:3400, badge:"Thrift · 1 left", images:["https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85"], desc:"A gently worn suede ankle boot, hand-picked and cleaned. Limited to a single pair." },
-  { id:"kv-010", name:"Featherlite Sandals", category:"Women's Shoes", gender:"Women", sizes:[5,6,7,8], price:2600, badge:"", images:["https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85"], desc:"Ultra-light everyday sandals with a soft footbed built for Karachi summers." },
-  { id:"kv-011", name:"Trailblazer Hiking Sneakers", category:"Men's Shoes", gender:"Men", sizes:[8,9,10,11,12], price:8200, oldPrice:9800, badge:"Sale", images:["https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"], desc:"Rugged outsole with extra grip, built for city trails and weekend adventures alike." },
-  { id:"kv-012", name:"Pastel Low-Top Sneakers", category:"Women's Shoes", gender:"Women", sizes:[5,6,7,8,9], price:5200, badge:"New", images:["https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=700&q=85","https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=700&q=85"], desc:"A soft pastel colourway on a classic low-top shape — light, comfortable, easy to style." }
+  { id:"kv-001", name:"Nova Runner Sneakers", category:"Sneakers", gender:"Men", sizes:[7,8,9,10,11], price:6500, oldPrice:8500, badge:"Sale", images:["https://picsum.photos/seed/kv1a/700/700","https://picsum.photos/seed/kv1b/700/700","https://picsum.photos/seed/kv1c/700/700"], desc:"A clean low-top runner built for daily wear — breathable mesh upper, cushioned sole, and a neutral colourway that pairs with everything." },
+  { id:"kv-002", name:"Urban Street Hi-Tops", category:"Sneakers", gender:"Men", sizes:[8,9,10,11,12], price:7200, badge:"New", images:["https://picsum.photos/seed/kv2a/700/700","https://picsum.photos/seed/kv2b/700/700","https://picsum.photos/seed/kv2c/700/700"], desc:"High-top silhouette with reinforced ankle support and a chunky outsole for extra street presence." },
+  { id:"kv-003", name:"Classic Canvas Slip-Ons", category:"Casual Shoes", gender:"Unisex", sizes:[6,7,8,9,10], price:3200, badge:"", images:["https://picsum.photos/seed/kv3a/700/700","https://picsum.photos/seed/kv3b/700/700","https://picsum.photos/seed/kv3c/700/700"], desc:"Lightweight canvas slip-ons for effortless everyday wear. Easy on, easy off, endlessly comfortable." },
+  { id:"kv-004", name:"Aria Platform Sneakers", category:"Women's Shoes", gender:"Women", sizes:[5,6,7,8], price:5800, oldPrice:7000, badge:"Sale", images:["https://picsum.photos/seed/kv4a/700/700","https://picsum.photos/seed/kv4b/700/700","https://picsum.photos/seed/kv4c/700/700"], desc:"A platform sole gives everyday height without sacrificing comfort. Soft leather-look upper." },
+  { id:"kv-005", name:"Thrift Find — Retro Runner", category:"Thrift Shoes", gender:"Men", sizes:[9,10], price:2800, badge:"Thrift · 1 left", images:["https://picsum.photos/seed/kv5a/700/700","https://picsum.photos/seed/kv5b/700/700","https://picsum.photos/seed/kv5c/700/700"], desc:"Pre-loved, carefully inspected retro runner in great condition. One-of-one — once it's gone, it's gone." },
+  { id:"kv-006", name:"Everyday Loafers", category:"Casual Shoes", gender:"Men", sizes:[7,8,9,10,11], price:4500, badge:"", images:["https://picsum.photos/seed/kv6a/700/700","https://picsum.photos/seed/kv6b/700/700","https://picsum.photos/seed/kv6c/700/700"], desc:"Smart-casual loafers that move easily from desk to weekend. Cushioned footbed for all-day comfort." },
+  { id:"kv-007", name:"Motion Knit Trainers", category:"Sneakers", gender:"Women", sizes:[5,6,7,8,9], price:6900, badge:"New", images:["https://picsum.photos/seed/kv7a/700/700","https://picsum.photos/seed/kv7b/700/700","https://picsum.photos/seed/kv7c/700/700"], desc:"Sock-fit knit upper that moves with your foot, paired with a responsive foam midsole." },
+  { id:"kv-008", name:"Heritage Court Sneakers", category:"Sneakers", gender:"Men", sizes:[8,9,10,11], price:5400, badge:"", images:["https://picsum.photos/seed/kv8a/700/700","https://picsum.photos/seed/kv8b/700/700","https://picsum.photos/seed/kv8c/700/700"], desc:"A timeless court silhouette in crisp leather panels — a wardrobe staple that never goes out of style." },
+  { id:"kv-009", name:"Thrift Find — Suede Boot", category:"Thrift Shoes", gender:"Women", sizes:[6,7], price:3400, badge:"Thrift · 1 left", images:["https://picsum.photos/seed/kv9a/700/700","https://picsum.photos/seed/kv9b/700/700","https://picsum.photos/seed/kv9c/700/700"], desc:"A gently worn suede ankle boot, hand-picked and cleaned. Limited to a single pair." },
+  { id:"kv-010", name:"Featherlite Sandals", category:"Women's Shoes", gender:"Women", sizes:[5,6,7,8], price:2600, badge:"", images:["https://picsum.photos/seed/kv10a/700/700","https://picsum.photos/seed/kv10b/700/700","https://picsum.photos/seed/kv10c/700/700"], desc:"Ultra-light everyday sandals with a soft footbed built for Karachi summers." },
+  { id:"kv-011", name:"Trailblazer Hiking Sneakers", category:"Men's Shoes", gender:"Men", sizes:[8,9,10,11,12], price:8200, oldPrice:9800, badge:"Sale", images:["https://picsum.photos/seed/kv11a/700/700","https://picsum.photos/seed/kv11b/700/700","https://picsum.photos/seed/kv11c/700/700"], desc:"Rugged outsole with extra grip, built for city trails and weekend adventures alike." },
+  { id:"kv-012", name:"Pastel Low-Top Sneakers", category:"Women's Shoes", gender:"Women", sizes:[5,6,7,8,9], price:5200, badge:"New", images:["https://picsum.photos/seed/kv12a/700/700","https://picsum.photos/seed/kv12b/700/700","https://picsum.photos/seed/kv12c/700/700"], desc:"A soft pastel colourway on a classic low-top shape — light, comfortable, easy to style." }
 ];
 
 /* ----------------------------------------------------------
@@ -81,24 +81,6 @@ const Wishlist = {
 };
 
 
-function fallbackProductImage(img){
-  if(!img || img.dataset.fallbackApplied === "1") return;
-  img.dataset.fallbackApplied = "1";
-  const label = (img.alt || "Kick Vibes").replace(/[<>&"]/g, "");
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-    <rect width="800" height="800" fill="#f5f5f5"/>
-    <g transform="translate(90 250) rotate(-6 310 150)">
-      <path d="M105 255 C155 210 225 190 285 155 L365 90 C392 69 420 72 441 95 L505 168 C527 193 558 208 610 220 L676 235 C705 242 721 266 710 291 C697 321 657 333 616 333 H168 C108 333 70 303 105 255Z" fill="#222"/>
-      <path d="M365 104 L430 106 L488 174 L430 205 L350 164Z" fill="#fff"/>
-      <path d="M145 264 C265 278 455 277 685 283" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
-      <path d="M178 222 L300 178 M210 240 L331 194 M245 255 L364 211" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-    </g>
-    <text x="400" y="650" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#222">KICK VIBES</text>
-    <text x="400" y="692" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">${label}</text>
-  </svg>`;
-  img.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
-}
-
 function formatPrice(n){ return "Rs. " + n.toLocaleString("en-PK"); }
 
 function showToast(msg){
@@ -126,7 +108,7 @@ function renderCart(){
   } else {
     wrap.innerHTML = items.map(i => `
       <div class="cart-item">
-        <img src="${i.image}" alt="${i.name}" onerror="fallbackProductImage(this)">
+        <img src="${i.image}" alt="${i.name}">
         <div class="cart-item-info">
           <div class="cart-item-name">${i.name}</div>
           <div class="cart-item-meta">Size: ${i.size}</div>
@@ -180,7 +162,7 @@ function productCardHTML(p){
   <div class="product-card" data-id="${p.id}">
     <div class="pc-media">
       <a href="product.html?id=${p.id}">
-        <img src="${p.images[0]}" alt="${p.name}" loading="lazy" onerror="fallbackProductImage(this)">
+        <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
       </a>
       ${p.badge ? `<span class="pc-badge">${p.badge}</span>` : ""}
       <button class="pc-wishlist ${wished?'active':''}" onclick="handleWishlist(event,'${p.id}')" aria-label="Wishlist">
@@ -334,9 +316,9 @@ function initProductPage(){
 
   container.innerHTML = `
     <div>
-      <div class="pd-main-img"><img id="pdMainImg" src="${p.images[0]}" alt="${p.name}" onerror="fallbackProductImage(this)"></div>
+      <div class="pd-main-img"><img id="pdMainImg" src="${p.images[0]}" alt="${p.name}"></div>
       <div class="pd-thumbs">
-        ${p.images.map((img,idx)=>`<img src="${img}" onerror="fallbackProductImage(this)" class="${idx===0?'active':''}" onclick="document.getElementById('pdMainImg').src=this.src; document.querySelectorAll('.pd-thumbs img').forEach(t=>t.classList.remove('active')); this.classList.add('active');">`).join("")}
+        ${p.images.map((img,idx)=>`<img src="${img}" class="${idx===0?'active':''}" onclick="document.getElementById('pdMainImg').src=this.src; document.querySelectorAll('.pd-thumbs img').forEach(t=>t.classList.remove('active')); this.classList.add('active');">`).join("")}
       </div>
     </div>
     <div>
