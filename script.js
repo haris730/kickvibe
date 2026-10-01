@@ -80,6 +80,25 @@ const Wishlist = {
   has(id){ return this.get().includes(id); }
 };
 
+
+function fallbackProductImage(img){
+  if(!img || img.dataset.fallbackApplied === "1") return;
+  img.dataset.fallbackApplied = "1";
+  const label = (img.alt || "Kick Vibes").replace(/[<>&"]/g, "");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+    <rect width="800" height="800" fill="#f5f5f5"/>
+    <g transform="translate(90 250) rotate(-6 310 150)">
+      <path d="M105 255 C155 210 225 190 285 155 L365 90 C392 69 420 72 441 95 L505 168 C527 193 558 208 610 220 L676 235 C705 242 721 266 710 291 C697 321 657 333 616 333 H168 C108 333 70 303 105 255Z" fill="#222"/>
+      <path d="M365 104 L430 106 L488 174 L430 205 L350 164Z" fill="#fff"/>
+      <path d="M145 264 C265 278 455 277 685 283" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+      <path d="M178 222 L300 178 M210 240 L331 194 M245 255 L364 211" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    </g>
+    <text x="400" y="650" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#222">KICK VIBES</text>
+    <text x="400" y="692" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">${label}</text>
+  </svg>`;
+  img.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+}
+
 function formatPrice(n){ return "Rs. " + n.toLocaleString("en-PK"); }
 
 function showToast(msg){
@@ -107,7 +126,7 @@ function renderCart(){
   } else {
     wrap.innerHTML = items.map(i => `
       <div class="cart-item">
-        <img src="${i.image}" alt="${i.name}">
+        <img src="${i.image}" alt="${i.name}" onerror="fallbackProductImage(this)">
         <div class="cart-item-info">
           <div class="cart-item-name">${i.name}</div>
           <div class="cart-item-meta">Size: ${i.size}</div>
@@ -161,7 +180,7 @@ function productCardHTML(p){
   <div class="product-card" data-id="${p.id}">
     <div class="pc-media">
       <a href="product.html?id=${p.id}">
-        <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
+        <img src="${p.images[0]}" alt="${p.name}" loading="lazy" onerror="fallbackProductImage(this)">
       </a>
       ${p.badge ? `<span class="pc-badge">${p.badge}</span>` : ""}
       <button class="pc-wishlist ${wished?'active':''}" onclick="handleWishlist(event,'${p.id}')" aria-label="Wishlist">
@@ -315,9 +334,9 @@ function initProductPage(){
 
   container.innerHTML = `
     <div>
-      <div class="pd-main-img"><img id="pdMainImg" src="${p.images[0]}" alt="${p.name}"></div>
+      <div class="pd-main-img"><img id="pdMainImg" src="${p.images[0]}" alt="${p.name}" onerror="fallbackProductImage(this)"></div>
       <div class="pd-thumbs">
-        ${p.images.map((img,idx)=>`<img src="${img}" class="${idx===0?'active':''}" onclick="document.getElementById('pdMainImg').src=this.src; document.querySelectorAll('.pd-thumbs img').forEach(t=>t.classList.remove('active')); this.classList.add('active');">`).join("")}
+        ${p.images.map((img,idx)=>`<img src="${img}" onerror="fallbackProductImage(this)" class="${idx===0?'active':''}" onclick="document.getElementById('pdMainImg').src=this.src; document.querySelectorAll('.pd-thumbs img').forEach(t=>t.classList.remove('active')); this.classList.add('active');">`).join("")}
       </div>
     </div>
     <div>
