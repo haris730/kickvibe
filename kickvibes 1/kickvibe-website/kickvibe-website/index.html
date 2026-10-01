@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kick Vibes — Step Into Your Style</title>
+<meta name="description" content="Kick Vibes — sneakers, casual shoes, men's & women's footwear and hand-picked thrift finds.">
+<link rel="icon" href="logo-icon.png" type="image/png">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo"><img src="logo-icon.png" alt="Kick Vibe" class="logo-img"></a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html?category=New Arrivals">New Arrivals</a>
+      <a href="shop.html?category=Men's Shoes">Men</a>
+      <a href="shop.html?category=Women's Shoes">Women</a>
+      <a href="shop.html?category=Thrift Shoes">Thrift</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchIcon" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" id="cartIcon" aria-label="Cart">
+        <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L4 2H2"/></svg>
+        <span class="cart-count">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+  <div class="search-panel" id="searchPanel">
+    <div class="wrap search-panel-inner">
+      <input type="text" id="headerSearchInput" placeholder="Search sneakers, casual shoes...">
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="shop.html?category=New Arrivals">New Arrivals</a></li>
+    <li><a href="shop.html?category=Men's Shoes">Men</a></li>
+    <li><a href="shop.html?category=Women's Shoes">Women</a></li>
+    <li><a href="shop.html?category=Thrift Shoes">Thrift</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-full">
+    <!-- REPLACE_ME: swap with your own product video once ready -->
+    <video class="hero-video" autoplay muted loop playsinline poster="hero-video-poster.jpg">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-fade"></div>
+    <div class="wrap hero-overlay-inner">
+      <span class="hero-tag">Karachi's own sneaker spot</span>
+      <div class="hero-copy">
+        <h1>Step Into Your Style</h1>
+        <p class="lead">Discover stylish footwear made for everyday moves.</p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">Shop Collection</a>
+          <a href="shop.html?category=New Arrivals" class="btn btn-outline">New Arrivals</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOP BY CATEGORY ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Shop by Category</h2>
+      <p>Find exactly what you're looking for, from everyday sneakers to one-off thrift finds.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="shop.html?category=Sneakers">
+        <span class="cat-num">01</span>
+        <h3>Sneakers</h3>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="shop.html?category=Casual Shoes">
+        <span class="cat-num">02</span>
+        <h3>Casual Shoes</h3>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="shop.html?category=Men's Shoes">
+        <span class="cat-num">03</span>
+        <h3>Men's Shoes</h3>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="shop.html?category=Women's Shoes">
+        <span class="cat-num">04</span>
+        <h3>Women's Shoes</h3>
+        <span class="cat-arrow">↗</span>
+      </a>
+      <a class="cat-card" href="shop.html?category=Thrift Shoes">
+        <span class="cat-num">05</span>
+        <h3>Thrift Shoes</h3>
+        <span class="cat-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEW ARRIVALS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>New Arrivals</h2>
+      <p>Fresh pairs just landed at Kick Vibes.</p>
+    </div>
+    <div class="product-grid" id="newArrivalsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PRODUCTS ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Featured Products</h2>
+      <p>Our most-loved picks across the store.</p>
+    </div>
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ============ THRIFT COLLECTION ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Thrift Collection</h2>
+      <p>Hand-picked, pre-loved pairs — each one a single, limited find.</p>
+    </div>
+    <div class="product-grid" id="thriftGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WHY KICK VIBES ============ -->
+<section style="padding:0;">
+  <div class="wrap" style="padding:0;">
+    <div class="section-head wrap" style="border-bottom:none;padding:60px 0 0;">
+      <h2>Why Kick Vibes</h2>
+    </div>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <svg class="feature-icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3L21 9.3l-4.5 4.4 1 6.3L12 17l-5.5 3 1-6.3L3 9.3l6.1-1z"/></svg>
+      <h3>Stylish Finds</h3>
+      <p>A tight, curated selection — not endless clutter to scroll through.</p>
+    </div>
+    <div class="feature">
+      <svg class="feature-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      <h3>Affordable Prices</h3>
+      <p>Real style shouldn't cost a fortune. Fair pricing on every pair.</p>
+    </div>
+    <div class="feature">
+      <svg class="feature-icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+      <h3>Carefully Selected</h3>
+      <p>Every product — new or thrifted — is checked before it's listed.</p>
+    </div>
+    <div class="feature">
+      <svg class="feature-icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <h3>Easy Ordering</h3>
+      <p>Add to cart, confirm on WhatsApp — that's it.</p>
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <div class="section-head" style="border-bottom:none;margin-bottom:20px;">
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How do I place an order? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Add your chosen items to the cart, then tap "Order on WhatsApp" — your order details are sent to us automatically to confirm and arrange delivery.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What sizes are available? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Each product page lists the exact sizes currently in stock for that pair. Thrift items are one-off, so sizing is limited to what's shown.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are thrift shoes inspected before selling? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — every thrift pair is checked for condition and cleaned before it's listed on the site.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are the delivery and payment options? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Delivery and payment details are confirmed directly over WhatsApp once you place your order. <!-- REPLACE_ME: add your real shipping/payment policy here --></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter" style="padding:0;">
+  <div class="wrap newsletter-inner">
+    <div>
+      <h2>Get 10% off your first order</h2>
+      <p>Subscribe for new arrivals, restocks and thrift drops.</p>
+    </div>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><img src="logo.png" alt="Kick Vibe" class="footer-logo-img"></div>
+      <p class="tag">Step Into Your Style</p>
+      <div class="footer-social">
+        <!-- REPLACE_ME: confirm/update social links -->
+        <a href="https://www.instagram.com/kickvibes.pk/?hl=en" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.facebook.com/KickVibePK/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://tiktok.com/@kickvibe.pk" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop.html?category=New Arrivals">New Arrivals</a></li>
+        <li><a href="shop.html?category=Men's Shoes">Men</a></li>
+        <li><a href="shop.html?category=Women's Shoes">Women</a></li>
+        <li><a href="shop.html?category=Thrift Shoes">Thrift</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="contact.html">Shipping</a></li>
+        <li><a href="contact.html">Returns</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Kick Vibes. All rights reserved.</span>
+    <span>Built in Karachi.</span>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Cart (<span id="cartItemCount">0</span>)</h3>
+    <button class="cart-close" id="cartCloseBtn">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-subtotal-row"><span>Subtotal</span><strong id="cartSubtotal">Rs. 0</strong></div>
+    <a href="#" id="cartWhatsappBtn" target="_blank" class="btn btn-primary btn-block">Order on WhatsApp</a>
+    <button class="btn btn-outline btn-block" style="margin-top:10px;" id="continueShoppingBtn" onclick="closeCart()">Continue Shopping</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
